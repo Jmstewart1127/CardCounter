@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jake.cardcounting.MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="77dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.436">
+
+        <EditText
+            android:id="@+id/numberOfDecks"
+            android:layout_width="224dp"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="9"
+            android:ems="10"
+            android:inputType="number"
+            tools:layout_editor_absoluteX="-5dp"
+            tools:layout_editor_absoluteY="20dp" />
+
+        <TextView
+            android:id="@+id/numberOfDecksLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter # of Decks"
+            tools:layout_editor_absoluteX="46dp"
+            tools:layout_editor_absoluteY="246dp" />
+
+    </GridLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="191dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/twoThroughSix"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="2-6"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_editor_absoluteY="291dp" />
+
+        <Button
+            android:id="@+id/sevenThroughNine"
+            android:layout_width="wrap_content"
+            android:layout_height="191dp"
+            android:text="7-9"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_editor_absoluteY="339dp" />
+
+        <Button
+            android:id="@+id/tenPlus"
+            android:layout_width="wrap_content"
+            android:layout_height="191dp"
+            android:text="10+"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_editor_absoluteY="387dp" />
+
+        <Button
+            android:id="@+id/ace"
+            android:layout_width="wrap_content"
+            android:layout_height="191dp"
+            android:text="Ace"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_editor_absoluteY="435dp" />
+    </LinearLayout>
+
+    <GridLayout
+        android:layout_width="123dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="68dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.325"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/runningCountLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Running Count: "
+            tools:layout_editor_absoluteX="59dp"
+            tools:layout_editor_absoluteY="56dp" />
+
+        <TextView
+            android:id="@+id/runningCount"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:text=""
+            tools:layout_editor_absoluteX="164dp"
+            tools:layout_editor_absoluteY="40dp" />
+
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="127dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="168dp"
+        android:orientation="horizontal"
+        app:layout_constraintHorizontal_bias="0.33"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/betLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bet?: "
+            tools:layout_editor_absoluteX="198dp"
+            tools:layout_editor_absoluteY="72dp" />
+
+        <TextView
+            android:id="@+id/bet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+
+    </GridLayout>
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:text="Reset"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="256dp" />
+
+    <GridLayout
+        android:layout_width="185dp"
+        android:layout_height="31dp"
+        tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteY="110dp">
+
+        <TextView
+            android:id="@+id/mathematicalCountLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Deck Count : " />
+
+        <TextView
+            android:id="@+id/mathematicalCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+
+    </GridLayout>
+
+
+</android.support.constraint.ConstraintLayout>
