@@ -1,5 +1,7 @@
 package com.example.jake.cardcounting.service;
 
+import android.util.Log;
+
 /**
  * Created by jake on 12/8/17.
  */
@@ -165,11 +167,17 @@ public class CardCounter {
     }
 
     public String mathematicalRunningTotal() {
-        double twoSix = this.twoThroughSix * this.cardsTwoThroughSix;
-        double sevenNine = this.sevenThroughNine * this.cardsSevenThroughNine;
-        double tenPlus = this.tenPlus * this.cardsTenPlus;
-        double ace = this.ace * this.cardsAce;
-        double result = twoSix + sevenNine + tenPlus + ace;
+        double twoSix = this.getCardsTwoThroughSix();
+        double sevenNine = this.getCardsSevenThroughNine();
+        double tenPlus = this.getCardsTenPlus();
+        double ace = this.getCardsAce();
+        Log.d("twoSix", "twoSix: " + Double.toString(twoSix));
+        Log.d("sevenNine", "sevenNine: " + Double.toString(sevenNine));
+        Log.d("tenPlus", "tenPlus: " + Double.toString(tenPlus));
+        Log.d("ace", "ace: " + Double.toString(ace));
+        Log.d("cardsDrawn", "cardsDrawn: " + Double.toString(this.getCardsDrawn()));
+        Log.d("totalCards", "totalCards: " + Double.toString(this.getTotalCards()));
+        double result = (twoSix + sevenNine + tenPlus + ace);
         return Double.toString(Math.round(result * 100d) / 100d);
     }
 
@@ -186,7 +194,8 @@ public class CardCounter {
     }
 
     public String getCharRunningTotal() {
-        String rt = Double.toString(Math.round(this.trueCount() * 100d) / 100d);
+        String rt = Double.toString(Math.round(this.trueCount()));
+        Log.d("true count", "trueCount: " + this.trueCount());
         return rt;
     }
 
@@ -197,6 +206,8 @@ public class CardCounter {
     private void checkNumberOfDecks() {
         if (this.cardsDrawn == 52) {
             this.numberOfDecks--;
+            this.setCardsDrawn(0.0);
+            Log.d("decks", "num of decks: " + this.numberOfDecks);
         }
     }
 }
